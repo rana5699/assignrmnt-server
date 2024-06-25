@@ -23,8 +23,6 @@ const run = async () => {
   try {
     // await client.connect();
 
-    // all collections
-
     // my own collection
     const touristSpotCollection = client
       .db("touristspotDB")
