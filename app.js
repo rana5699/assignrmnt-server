@@ -4,8 +4,8 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
 const uri = process.env.DB_URL;
 
@@ -19,7 +19,7 @@ const client = new MongoClient(uri, {
 
 const run = async () => {
   try {
-    // await client.connect();
+    await client.connect();
 
     // all collections
 
@@ -264,10 +264,10 @@ const run = async () => {
     });
 
     // Send a ping to confirm a successful connection
-    // await client.db("admin").command({ ping: 1 });
-    // console.log(
-    //   "Pinged your deployment. You successfully connected to MongoDB!"
-    // );
+    await client.db("admin").command({ ping: 1 });
+    console.log(
+      "Pinged your deployment. You successfully connected to MongoDB!"
+    );
   } finally {
     // Ensures that the client will close when you finish/error
     // await client.close();
