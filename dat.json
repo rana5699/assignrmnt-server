@@ -1,0 +1,52 @@
+[
+  {
+    "countryImage": "https://i.ibb.co/GMmMyC9/tanvir-hassan-n8p-BGoh9-Ylw-unsplash.jpg",
+    "countryName": "Bangladesh",
+    "regularPrice": 100,
+    "save": 20,
+    "discountPrice": 80,
+    "days": 7,
+    "shortDescription": "A beautiful country with rich cultural heritage.",
+    "location": "Asia"
+  },
+  {
+    "countryImage": "https://i.ibb.co/r4qbHfY/ammie-ngo-vcu-OZBxx-Rk-unsplash.jpg",
+    "countryName": "Vietnam",
+    "regularPrice": 120,
+    "save": 25,
+    "discountPrice": 90,
+    "shortDescription": "Known for its beaches, rivers, and Buddhist pagodas.",
+    "location": "Asia",
+    "days": 4
+  },
+  {
+    "countryImage": "https://i.ibb.co/0JGw2DT/gaddafi-rusli-2ue-Un-L4-Ck-V8-unsplash.jpg",
+    "countryName": "Malaysia",
+    "regularPrice": 150,
+    "save": 30,
+    "discountPrice": 105,
+    "shortDescription": "Famous for its modern cities, rainforests, and beaches.",
+    "location": "Asia",
+    "days": 3
+  },
+  {
+    "countryImage": "https://i.ibb.co/y8tXGtB/jason-cooper-XEhch-WQu-Wy-M-unsplash.jpg",
+    "countryName": "Indonesia",
+    "regularPrice": 200,
+    "save": 15,
+    "discountPrice": 170,
+    "shortDescription": "Known for its volcanic islands and diverse culture.",
+    "location": "Asia",
+    "days": 9
+  },
+  {
+    "countryImage": "https://i.ibb.co/Y77F0G7/ben-stern-N4zi-Ixq-Yg-JY-unsplash.jpg",
+    "countryName": "Cambodia",
+    "regularPrice": 90,
+    "save": 10,
+    "discountPrice": 81,
+    "shortDescription": "Home to the magnificent Angkor Wat temple complex.",
+    "location": "Asia",
+    "days": 1
+  }
+]

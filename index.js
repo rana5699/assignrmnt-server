@@ -36,6 +36,9 @@ const run = async () => {
     // coutries collection
     const countryNames = client.db("touristspotDB").collection("countrynames");
 
+    // offers collection
+    const offers = client.db("touristspotDB").collection("offers");
+
     // all collections
 
     // my own   tourist spots
@@ -147,6 +150,19 @@ const run = async () => {
       }
     });
 
+    // get offers data
+    app.get("/offers", async (req, res) => {
+      try {
+        const offersData = await offers.find().toArray();
+        console.log("offersData:", offersData);
+        res.status(200).json(offersData);
+      } catch (error) {
+        res.status(500).json({
+          error: "An error occurred while fetching coutry names .",
+        });
+      }
+    });
+
     // tourist sposts post method
     app.post("/touristspot", async (req, res) => {
       try {
@@ -190,6 +206,25 @@ const run = async () => {
         }
 
         const result = await countryNames.insertMany(names);
+        res.status(201).json(result);
+      } catch (error) {
+        res.status(500).json({
+          error: "An error occurred while user adding the tourist spots.",
+        });
+      }
+    });
+
+    // post offers Data
+    app.post("/offers", async (req, res) => {
+      try {
+        const offer = req.body;
+
+        if (!Array.isArray(offer)) {
+          res.status(400).json({ error: "Request body must be an array" });
+        }
+
+        const result = await offers.insertMany(offer);
+        console.log("result:", result);
         res.status(201).json(result);
       } catch (error) {
         res.status(500).json({
